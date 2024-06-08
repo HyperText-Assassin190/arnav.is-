@@ -1,26 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>arnav.is()</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <!-- navbar container -->
     <header>
         <nav class="navbar-container">
             <div class="logo">arnav<span>.is()</span></div>
             <div class="navbar">
                 <ul>
-                    <li class="nav-list"><a href="#" class="nav-link">.home()</a></li>
-                    <li class="nav-list"><a href="#" class="nav-link">.about()</a></li>
-                    <li class="nav-list"><a href="#" class="nav-link">.projects()</a></li>
+                    <li class="nav-list"><a href="#home" class="nav-link">.home()</a></li>
+                    <li class="nav-list"><a href="#about" class="nav-link">.about()</a></li>
+                    <li class="nav-list"><a href="#projects" class="nav-link">.projects()</a></li>
                     <li class="nav-list"><a href="#" class="nav-link">.journey()</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    
+
+
+    <!-- home section -->
+    <main class="home" id="home">
+        <div class="home-container">
+            <div class="content">
+                <div class="text-section">
+                    <div class="heading">arnav<span>.is()</span></div>
+                    <div class="des">A <span>Front-End Programmer</span></div>
+                </div>
+
+                <div class="image-section">
+                    <img src="assets/personimg.jpg" alt="Person Image">
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <section class="section about-section" id="about">
+        <div class="section-heading">About Me</div>
+
+        <div class="section-content about-subsection">
+            <div class="about-image">
+                <img src="assets/personimg.jpg" alt="">
+            </div>
+
+            <div class="about-text">
+                <div class="heading">Arnav Raj Singh</div>
+                <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, ipsum. Repellat optio
+                    soluta omnis nulla error aliquid, inventore quae reiciendis enim, minus animi aperiam. Obcaecati
+                    amet, similique unde officia fugit doloribus. Suscipit aliquid deleniti eligendi sunt, veritatis
+                    nesciunt eveniet atque culpa tempore quibusdam commodi ducimus!</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+        <div class="section-heading">My Projects</div>
+
+        <div class="section-content projects-subsection">
+            <div class="project-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro exercitationem, repellat consequatur quam
+                autem laboriosam at quis iure, corrupti reprehenderit voluptas aliquam vel. Aliquid, provident?
+            </div>
+
+            <div class="project-card-container">
+                <div class="project-card">
+                    <div class="project-img">
+
+                    </div>
+                    <div class="project-text">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
 
@@ -36,12 +98,17 @@
 
 
     <!-- Loader -->
-    <!-- <div class="load-wrapper">
+    <div class="load-wrapper">
         <div class="loader"></div>
         <div class="loader"></div>
         <div class="loader"></div>
-    </div> -->
+    </div>
 
-    <script src="app.js"></script>
+    <script src="app.js">
+        $(window).on("load", function () {
+            $(".loader-wrapper").fadeOut("slow");
+        })
+    </script>
 </body>
+
 </html>
