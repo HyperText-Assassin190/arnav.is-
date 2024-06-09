@@ -512,28 +512,74 @@ main.home {
     display: flex;
     flex-direction: column;
     position: relative;
+    gap: 100px;
 }
 
-.timeline-container::before {
+.timeline-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    font-size: 2.8rem;
+    border-bottom: 1px solid var(--accent);
+}
+
+.timeline-container .img {
+    position: absolute;
+    left: -40px;
+    transform: translateX(-100%) translateY(-50%);
+    top: 50%;
+}
+
+.timeline-header img {
+    border-radius: 50%;
+    width: 80px;
+}
+
+.timeline-header .img::before {
     content: '';
     position: absolute;
+    display: block;
     width: 1px;
-    height: 100%;
+    height: 750px;
     background-color: var(--accent);
+    left: 50%;
     top: 100%;
-    left: 0;
+}
+
+.timeline-item-container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
 
 .timeline-item {
     display: flex;
     flex-direction: column;
+    gap: 50px;
 }
 
-.timeline-header {
+.timeline-item-header {
+    position: relative;
     display: flex;
     gap: 50px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid var(--accent);
+    font-size: 1.5rem;
+}
+
+.timeline-item-header::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 70px;
+    background-color: var(--accent);
+    left: -10px;
+    top: 50%;
+    transform: translateX(-100%);
+}
+
+.timeline-item-description {
+    width: 70%;
+    text-align: justify;
 }
 
 
